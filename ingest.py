@@ -1,13 +1,12 @@
-# ingest.py (CSV version)
 import os
 import pandas as pd
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_ollama import OllamaEmbeddings
 from langchain_community.vectorstores import FAISS
 
-CSV_PATH = r"D:\Confiz\Project 3- AI Bot O'LLAMA\rag\docs\data.csv"       # <-- your CSV file
+CSV_PATH = r"D:\Confiz\Project 3- AI Bot O'LLAMA\rag\docs\data.csv"      
 INDEX_DIR = "faiss_index"
-EMBED_MODEL = "mxbai-embed-large"  # Ollama embedding model
+EMBED_MODEL = "mxbai-embed-large" 
 
 def main():
     if not os.path.isfile(CSV_PATH):
@@ -43,3 +42,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
