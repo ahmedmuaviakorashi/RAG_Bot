@@ -62,7 +62,7 @@ llm = OllamaLLM(
 
 tools = [knowledge_search]
 react_agent = create_react_agent(llm, tools, AGENT_PROMPT)
-agent = AgentExecutor(agent=react_agent, tools=tools, verbose=False)  # set True to debug
+agent = AgentExecutor(agent=react_agent, tools=tools, verbose=False) 
 
 RAG_PROMPT = ChatPromptTemplate.from_template(textwrap.dedent("""
 You are a helpful assistant. Use the provided context to answer the user's question.
@@ -100,3 +100,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
